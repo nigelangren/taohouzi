@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+li {
+  list-style: none;
+}
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 1.1071rem;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  z-index: 11;
+}
+#header .oneTop a {
+  width: 100%;
+  height: 100%;
+}
+#header .oneTop a img {
+  width: 100%;
+  height: 100%;
+}
+#header .top {
+  display: flex;
+  align-items: center;
+}
+#header .top .left {
+  width: .38rem;
+  height: .25rem;
+  background:  url(../images/下载.png) no-repeat 0 0 / .38rem .25rem;
+  margin-right: .1rem;
+}
+#header .top .centent {
+  display: flex;
+  flex: 1;
+  position: relative;
+  margin-right: .2rem;
+}
+#header .top .centent div {
+  position: absolute;
+  width: 0.21rem;
+  height: 0.21rem;
+  background: url(../images/sprites.png) no-repeat -0.58rem -1.1rem / 2rem 2rem;
+  left: 0.05rem;
+  top: 0.05rem;
+}
+#header .top .centent form {
+  width: 100%;
+}
+#header .top .centent form input {
+  padding-left: .3rem;
+  height: 0.25rem;
+  width: 100%;
+  font-size: .14rem;
+  border-radius: 0.125rem;
+}
+#header .top .right {
+  position: absolute;
+  width: 0.18rem;
+  height: 0.21rem;
+  background: url(../images/sprites.png) no-repeat -1.27rem -0.33rem / 2rem 2rem #ccc;
+  right: 0;
+  margin-left: .1rem;
+}
+#header .bottom ul {
+  display: flex;
+  justify-content: space-between;
+}
+#header .bottom ul li {
+  font-size: .14rem;
+  line-height: 0.34rem;
+}
+#header .bottom ul li:nth-of-type(1) {
+  margin-left: .14rem;
+}
+#main {
+  margin-top: 1.1071rem;
+}
+#main .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#main .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+#nav {
+  height: 0.85rem;
+}
+#nav ul {
+  display: flex;
+}
+#nav ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+#nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#nav ul li a img {
+  width: 0.72rem;
+  height: 0.76rem;
+}
+#article {
+  background: #ccc;
+  padding-bottom: 0.5rem;
+}
+#article .smallbox {
+  display: flex;
+  flex-direction: column;
+}
+#article .smallbox .top {
+  display: flex;
+}
+#article .smallbox .top .left {
+  flex: 1;
+}
+#article .smallbox .top .left a {
+  width: 100%;
+  height: 100%;
+}
+#article .smallbox .top .left a img {
+  width: 100%;
+  height: 100%;
+}
+#article .smallbox .top .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#article .smallbox .top .right a {
+  flex: 1;
+}
+#article .smallbox .top .right a img {
+  width: 100%;
+  height: 100%;
+}
+#article .smallbox .bottom {
+  margin-top: .1rem;
+  display: flex;
+}
+#article .smallbox .bottom a {
+  flex: 1;
+}
+#article .smallbox .bottom a img {
+  width: 100%;
+  height: 100%;
+}
+#article .bigbox {
+  background: white;
+  margin-top: .1rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: .01rem solid #ccc;
+}
+#article .bigbox .top {
+  flex: 1;
+}
+#article .bigbox .top a {
+  width: 100%;
+  height: 100%;
+}
+#article .bigbox .top a img {
+  width: 100%;
+  height: 100%;
+}
+#article .bigbox .bottom {
+  display: flex;
+}
+#article .bigbox .bottom .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#article .bigbox .bottom .left a {
+  width: 100%;
+  height: 100%;
+}
+#article .bigbox .bottom .left a img {
+  width: 1.85rem;
+}
+#article .bigbox .bottom .left a h3 {
+  font-size: 0.2rem;
+  margin-left: 0.1rem;
+}
+#article .bigbox .bottom .left a span {
+  font-size: .16rem;
+  margin-left: 0.1rem;
+}
+#article .bigbox .bottom .left a div span {
+  color: red;
+  font-size: 0.18rem;
+}
+#article .bigbox .bottom .left a div del {
+  font-size: 0.14rem;
+}
+#article .bigbox .bottom .right {
+  flex: 1;
+}
+#article .bigbox .bottom .right a {
+  width: 100%;
+  height: 100%;
+}
+#article .bigbox .bottom .right a img {
+  width: 1.85rem;
+}
+#article .bigbox .bottom .right a h3 {
+  font-size: 0.2rem;
+  margin-left: 0.1rem;
+}
+#article .bigbox .bottom .right a span {
+  font-size: .16rem;
+  margin-left: 0.1rem;
+}
+#article .bigbox .bottom .right a div span {
+  color: red;
+  font-size: 0.18rem;
+}
+#article .bigbox .bottom .right a div del {
+  font-size: 0.14rem;
+}
+#article .cententbox {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.72rem;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  height: 0.5rem;
+  width: 100%;
+  background: white;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#footer ul li a img {
+  width: 0.65rem;
+  height: 0.5rem;
+}

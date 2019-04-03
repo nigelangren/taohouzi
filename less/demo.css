@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+li {
+  list-style: none;
+}
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  height: 0.3rem;
+  display: flex;
+  background-color: red;
+  align-items: center;
+  z-index: 2;
+}
+#header .left {
+  height: 0.21rem;
+  width: 0.58rem;
+  background: url(../images/sprites.png) no-repeat 0 -1.1rem / 2rem 2rem;
+}
+#header .centent {
+  flex: 1;
+}
+#header .centent form {
+  position: relative;
+}
+#header .centent form .icon-search {
+  position: absolute;
+  width: 0.21rem;
+  height: 0.21rem;
+  background: url(../images/sprites.png) no-repeat -0.58rem -1.1rem / 2rem 2rem;
+  left: 0.05rem;
+  top: 0.05rem;
+}
+#header .centent form input {
+  padding-left: 0.3rem;
+  height: 0.25rem;
+  width: 100%;
+  border-radius: 0.15rem;
+  font-size: 0.14rem;
+}
+#header .right {
+  height: 0.21rem;
+  width: 0.58rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header .right a {
+  font-size: 0.14rem;
+  color: white;
+}
+#main .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#main .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+#nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav div {
+  margin-top: 0.1rem;
+  width: 25%;
+}
+#nav div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#nav div a img {
+  width: 0.4rem;
+}
+#nav div a span {
+  font-size: 0.14rem;
+}
+#section {
+  padding: 0.1rem;
+  background: #ccc;
+}
+#section .bigbox {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+#section .bigbox .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#section .bigbox .top .left {
+  display: flex;
+}
+#section .bigbox .top .left img {
+  width: 0.2rem;
+  height: 0.25rem;
+}
+#section .bigbox .top .left p {
+  font-size: 0.14rem;
+  line-height: 0.25rem;
+  margin: 0 0.1rem;
+}
+#section .bigbox .top .left span {
+  font-size: 0.14rem;
+  line-height: 0.25rem;
+  color: white;
+  background-color: black;
+  margin-left: 0.05rem;
+}
+#section .bigbox .top .left span:nth-of-type(3n) {
+  background-color: white;
+  color: black;
+}
+#section .bigbox .top a {
+  font-size: 0.14rem;
+  line-height: 0.25rem;
+}
+#section .bigbox .bottom {
+  display: flex;
+}
+#section .bigbox .bottom div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+#section .bigbox .bottom div img {
+  width: 1.1rem;
+}
+#section .bigbox .bottom div span {
+  font-size: .12rem;
+}
+#section .bigbox .bottom div del {
+  font-size: .12rem;
+}
+#article {
+  padding: 0.1rem;
+  background-color: #ccc;
+}
+#article .box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+#article .box .top {
+  position: relative;
+}
+#article .box .top span {
+  margin-left: 0.2rem;
+  font-size: 0.14rem;
+}
+#article .box .top span::before {
+  left: 0.12rem;
+  top: 0.03rem;
+  content: "";
+  position: absolute;
+  width: 0.03rem;
+  height: 0.14rem;
+  background-color: red;
+}
+#article .box .bottom {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+#article .box .bottom .left {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+#article .box .bottom .left a img {
+  width: 100%;
+  height: 100%;
+}
+#article .box .bottom .right {
+  flex: 1;
+}
+#article .box .bottom .right a {
+  display: flex;
+  flex: 1;
+}
+#article .box .bottom .right a img {
+  width: 100%;
+  height: 100%;
+}
+#article .box .bottom .right a:nth-of-type(2) {
+  border-top: 1px solid #ccc;
+}
+#footer {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+#footer ul li a img {
+  width: 0.65rem;
+  height: 0.5rem;
+}
+.article2 {
+  margin-bottom: 0.6rem;
+}
